@@ -17,6 +17,13 @@ def lnglat_validator(value):
 
 
 class Post(models.Model):
+    STATUS_CHOICES=(
+        ('d', 'Draft'),
+        ('p', 'Published'),
+        ('w', 'Withdrawn'),
+    )
+
+
     author= models.CharField(max_length=20)
     title = models.CharField(max_length=100, verbose_name='제목',
         help_text="제목을 입력해주세요. 최대 100자 내외"
@@ -32,5 +39,6 @@ class Post(models.Model):
                               blank=True,
                               validators=[lnglat_validator],
                               help_text='경도/위도 포맷으로 입력')
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
