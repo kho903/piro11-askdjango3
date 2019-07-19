@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'dojo',
 ]
 
+
+
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -127,3 +129,4 @@ STATIC_URL = '/static/'
 
 
 INTERNAL_IPS = ['127.0.0.1']
+

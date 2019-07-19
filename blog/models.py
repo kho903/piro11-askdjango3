@@ -1,4 +1,5 @@
 import re
+from django.conf import settings
 from django.db import models
 from django.forms import ValidationError
 
@@ -23,8 +24,8 @@ class Post(models.Model):
         ('w', 'Withdrawn'),
     )
 
-
-    author= models.CharField(max_length=20)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    #author= models.CharField(max_length=20)
     title = models.CharField(max_length=100, verbose_name='제목',
         help_text="제목을 입력해주세요. 최대 100자 내외"
     # choices=(
