@@ -24,7 +24,7 @@ class Post(models.Model):
         ('w', 'Withdrawn'),
     )
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,related_name='+', on_delete=models.CASCADE)
     #author= models.CharField(max_length=20)
     title = models.CharField(max_length=100, verbose_name='제목',
         help_text="제목을 입력해주세요. 최대 100자 내외"
