@@ -63,7 +63,9 @@ ROOT_URLCONF = 'practice.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'practice', 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,4 +132,6 @@ STATIC_URL = '/static/'
 
 
 INTERNAL_IPS = ['127.0.0.1']
+
+
 
