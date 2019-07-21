@@ -1,13 +1,7 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>AskDjango's Blog</title>
-</head>
-<body>
-<h1>AskDjango</h1>
-<p>안녕하세요 여러분의 파이썬 장고 페이스 메이커가 되어 드리겠습니다.</p>
+{% extends "blog/layout.html" %}
+
+{% block content %}
+
 
 <form action="" method="get">
     <input type="text" name="q" value="{{ q }}" />
@@ -28,20 +22,8 @@
     {% endfor %}
 </ul>
 
-
-
-
-
-
 <ul>
     <li>http://localhost:8000/blog/</li>
     <li>어쩌고저쩌고으어ㅏ얼ㄴ래ㅣ날내ㅣ라</li>
 </ul>
-</body>
-</head>
-</html>
-
-
-
-
-
+{% endblock %}
