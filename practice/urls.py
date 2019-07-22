@@ -25,13 +25,16 @@ from django.conf import settings
 #from django.conf.urls import include, url
 from django.urls import path, include, re_path
 from django.contrib import admin
+from django.shortcuts import redirect
 #from django.shortcuts import redirect
 #from django.views.generic import RedirectView
 
 
-
+def root(request):
+    return redirect('post_list')
 
 urlpatterns=[
+    re_path(r'^$',root,name='root'),
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^accounts/', include('accounts.urls')),
     re_path(r'^blog/', include('blog.urls'), name='blog'),
