@@ -34,7 +34,7 @@ def root(request):
     return redirect('post_list')
 
 urlpatterns=[
-    re_path(r'^$',root,name='root'),
+    re_path(r'^$', root, name='root'),
     re_path(r'^admin/', admin.site.urls),
     re_path(r'^accounts/', include('accounts.urls')),
     re_path(r'^blog/', include('blog.urls'), name='blog'),
