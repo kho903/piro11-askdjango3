@@ -1,7 +1,7 @@
 import os
 from django.conf import settings
 from django.http import JsonResponse, HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404,redirect, render
 from .forms import PostForm
 from .models import Post
 
@@ -37,6 +37,21 @@ def post_new(request):
         'form': form,
     })
 
+
+def post_edit(request, id):
+    post = get_object_or_404(Post, id=id)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.ip = request.META['REMOTE_ADDR']
+            post.save()
+            return redirect('/dojo/')
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'dojo/post_form.html',{
+        'form' : form,
+    })
 
 
 
