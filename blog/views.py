@@ -12,10 +12,13 @@ def post_list(request):
     if q:
         qs = qs.filter(title__icontains=q)
 
-    return render(request, 'blog/post_list.html',{
+    response = render(request, 'blog/post_list.html',{
         'post_list': qs,
-        'q':q,
+        'q': q,
     })
+    # HttpResponse 인스턴스인데, render를 통해서, 좀 더 쉽게 템플릿을 통한 렌더링
+    response
+    return response
 
 
 def post_detail(request, id):
