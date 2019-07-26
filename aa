@@ -1,0 +1,44 @@
+[33m786e871[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: commit: dojo.models.GameUser 모델을 통해 unique_together 예시추가
+[33m8b45a4c[m HEAD@{1}: commit: dojo/post_form.html 에 custom bootstrap3 스타일 적용
+[33md71c5d4[m HEAD@{2}: commit: dojo/post_form.html 템플릿에 bootstrap3 스타일 적용
+[33mceaf2b0[m HEAD@{3}: commit: javascript를 통해 dojo.models.Post.user_agent 필드값 채움
+[33m68ea5c3[m HEAD@{4}: commit: dojo.models.Post 모델에 user_agent 필드 추가
+[33m4faa234[m HEAD@{5}: commit: dojo.models.GameUser 모델을 통해 unique_together 예시 추가
+[33m86d2248[m HEAD@{6}: commit: blog.vies.post_new/post_edit 뷰를 구현
+[33m69ee55d[m HEAD@{7}: commit: dojo.views.post_edit 뷰 구현
+[33m9e333c6[m HEAD@{8}: commit: dojo.models.Post 모델에 validators 적용하고, model_form.save(commit=False) 활용 예시 추가
+[33m562d89f[m HEAD@{9}: commit: dojo.views.post_new 뷰 구현
+[33m24118e2[m HEAD@{10}: commit: dojo.forms.PostForm 클래스 정의
+[33m3474ef7[m HEAD@{11}: commit: dojo.models.Post 모델을 추가하고, 마이그레이션
+[33ma584df9[m HEAD@{12}: commit: dojo.models.Post 모델을 추가하고 마이그레이션
+[33m22b1eeb[m HEAD@{13}: commit: 프로젝트 템플릿에 bootstrap3 스타일을 적용
+[33ma1a6d66[m HEAD@{14}: commit: 각 app마다 url namespace 적용
+[33mb56ac8c[m HEAD@{15}: commit: url reverse 샘플코드 추가
+[33m1f01afe[m HEAD@{16}: commit: url reverse 샘플코드 추가
+[33mbdfd3bf[m HEAD@{17}: commit: blog/templates/blog/layout.html 부모템플릿을 정의하고 상속 처리2
+[33m3aa3f1f[m HEAD@{18}: commit: blog/templates/blog/layout.html 부모템플릿을 정의하고 상속 처리
+[33m362f11b[m HEAD@{19}: commit: related_name 예시로서, shop.models.Post 모델 생성
+[33m391c1b0[m HEAD@{20}: commit: related_name 예시로서, shop.models.Post 모델 생성
+[33m6abb495[m HEAD@{21}: commit: shop 앱 생성/등록
+[33m57fc8e3[m HEAD@{22}: commit: blog.models.Post 모델에 user필드 추가
+[33m2f17f4c[m HEAD@{23}: commit: settings.AUTH_USER_MODEL 올바른 지정
+[33m8111ec5[m HEAD@{24}: commit: account.models.Profile 모델 생성/admin 등록
+[33m8f8c825[m HEAD@{25}: commit: 새로이 accounts 앱을 생성 /등록
+[33m0694d05[m HEAD@{26}: commit: blog.models.Post.tag_set 필드를 옵션 필드로 지정
+[33m83868d5[m HEAD@{27}: commit: blog,.models.Tag 모델 생성 /admin 등록
+[33ma6f6af3[m HEAD@{28}: commit: blog.models.Comment 모델 생성/admin 등록
+[33md3f27fc[m HEAD@{29}: commit: 10강
+[33m8c6dab0[m HEAD@{30}: commit: added requirements.txt
+[33mb20a2df[m HEAD@{31}: commit: blog.bodels.Post 모델에 기본정렬 지정
+[33m4a541be[m HEAD@{32}: commit: blog.views.post_list 뷰에 QuerySet 검색 구현
+[33m7fb2a89[m HEAD@{33}: commit: blog.views.post_list 뷰에서 포스티 목록 구현
+[33m293cc04[m HEAD@{34}: commit: blog.models.Post 모델에 status 필드를 추가하고, 이를 처리하는 Custom Admin Action 구현
+[33maf1b5c1[m HEAD@{35}: commit: blog.admin.PostAdmin에 list_display커스텀 8강
+[33m9565ca9[m HEAD@{36}: commit: 8강 settings
+[33m966e4c4[m HEAD@{37}: commit: 필수필드 content 추가하고, makemigrations/migrate수행
+[33m73eec46[m HEAD@{38}: commit: 5강
+[33mefabcf1[m HEAD@{39}: commit: 5강
+[33mfc23b80[m HEAD@{40}: commit: blog.models.Post 모델 생성/마이그레이션/admin 등록
+[33m85e3e47[m HEAD@{41}: commit: 클래스 기반 뷰 (CBV)의 4가지 패턴
+[33me24c70e[m HEAD@{42}: commit: 3강
+[33m99e0325[m HEAD@{43}: initial pull
