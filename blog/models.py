@@ -2,6 +2,9 @@ import re
 from django.conf import settings
 from django.db import models
 from django.forms import ValidationError
+from imagekit.models import ImageSpecField
+from imagekit.processors import Thumbnail
+
 
 #Create your models here.
 # class Article(models.Model):
@@ -26,17 +29,18 @@ class Post(models.Model):
     )
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL,related_name='+', on_delete=models.CASCADE)
-    #author= models.CharField(max_length=20)
+
     title = models.CharField(max_length=100, verbose_name='제목',
         help_text="제목을 입력해주세요. 최대 100자 내외"
-    # choices=(
-    #     ('제목1', '제목1 레이블'), #('저장될 값','UI에 보여질 레이블')
-    #     ('제목2', '제목2 레이블'),
-    #     ('제목3', '제목3 레이블'),
-    # )
-    ) #길이 제한이 있는 문자열
+    )
     content = models.TextField(verbose_name="내용") #길이 제한이 없는 문자열
     photo = models.ImageField(blank=True, upload_to='blog/post/%Y/%m/%d')
+    photo_thumbnail = ImageSpecField(
+        source='photo',
+        processors=[Thumbnail(300,300)],
+        format='JPEG',
+        options={'quality':60})
+
     tags = models.CharField(max_length=100, blank=True)
     lnglat = models.CharField(max_length=50,
                               blank=True,
