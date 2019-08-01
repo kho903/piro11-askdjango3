@@ -36,6 +36,7 @@ class Post(models.Model):
     # )
     ) #길이 제한이 있는 문자열
     content = models.TextField(verbose_name="내용") #길이 제한이 없는 문자열
+    photo = models.ImageField(blank=True)
     tags = models.CharField(max_length=100, blank=True)
     lnglat = models.CharField(max_length=50,
                               blank=True,
