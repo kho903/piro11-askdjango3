@@ -2,7 +2,7 @@ import re
 from django.conf import settings
 from django.db import models
 from django.forms import ValidationError
-from imagekit.models import ImageSpecField
+from imagekit.models import ProcessedImageField
 from imagekit.processors import Thumbnail
 
 
@@ -34,12 +34,10 @@ class Post(models.Model):
         help_text="제목을 입력해주세요. 최대 100자 내외"
     )
     content = models.TextField(verbose_name="내용") #길이 제한이 없는 문자열
-    photo = models.ImageField(blank=True, upload_to='blog/post/%Y/%m/%d')
-    photo_thumbnail = ImageSpecField(
-        source='photo',
-        processors=[Thumbnail(300,300)],
-        format='JPEG',
-        options={'quality':60})
+    photo = ProcessedImageField(blank=True, upload_to='blog/post/%Y/%m/%d',
+                processors=[Thumbnail(300, 300)],
+                            format='JPEG',
+                            options={'quality': 60})
 
     tags = models.CharField(max_length=100, blank=True)
     lnglat = models.CharField(max_length=50,
