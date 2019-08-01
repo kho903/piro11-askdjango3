@@ -1,4 +1,5 @@
 {% extends "blog/layout.html" %}
+{% load imagekit %}
 
 {% block title %}
     {{ post.title }}
@@ -15,7 +16,14 @@
     <h2>{{ post.title }}</h2>
 {#    <img src="/media/{{ post.photo }}" style="max-width: 100%;" />#}
     {% if post.photo %}
-        <img src="{{ post.photo.url }}" style="max-width: 100%" />
+        <img src="{{ post.photo.url }}" style="max-width: 100%;" />
+        {% thumbnail "100x100" post.photo %}
+
+        {% thumbnail "100x100" post.photo as thumb %}
+        <img src="{{ thumb.url }}" width="{{ thumb.width }}" height="{{ thumb.height }}" />
+
+        {% thumbnail "100x100" post.photo -- style="" onclick="" class="" %}
+
     {% endif %} }
 
     {{ post.content|linebreaks }}
