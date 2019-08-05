@@ -29,10 +29,12 @@ from django.contrib import admin
 from django.shortcuts import redirect
 #from django.shortcuts import redirect
 #from django.views.generic import RedirectView
+from blog.views_cbv import post_list
 
 
 def root(request):
     return redirect('post_list')
+
 
 urlpatterns=[
     re_path(r'^$', root, name='root'),
@@ -45,6 +47,7 @@ urlpatterns=[
 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 if settings.DEBUG:
     import debug_toolbar
