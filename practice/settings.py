@@ -148,3 +148,12 @@ from django.contrib.messages import constants
 
 MESSAGE_LEVEL = constants.DEBUG  # 지금부터 debug 레벨의 messages 를 남길 수 있음.
 MESSAGE_TAGS = {constants.ERROR: 'danger'}
+
+
+
+
+from django.urls import reverse_lazy
+
+
+LOGIN_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL =reverse_lazy('profile')

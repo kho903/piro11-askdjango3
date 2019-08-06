@@ -1,6 +1,11 @@
 from django.conf import settings
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import redirect,render
+from django.shortcuts import redirect, render
+from django.contrib.auth.models import User
+from django.contrib import auth
+
+
+
 
 
 def signup(request):
