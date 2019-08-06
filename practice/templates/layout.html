@@ -35,7 +35,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">AskDjango</a>
+            <a class="navbar-brand" href="{% url 'root' %}">AskDjango</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -46,7 +46,7 @@
             <ul class="nav navbar-nav navbar-right">
 
                 {% if user.is_authenticated %}
-                    {{ user }}
+                    <a href="{% url 'profile' %}">{{ user }}</a>
                     <li><a href="#">{{ user.date_joined }}</a></li>
                     <li><a href="{% url "logout" %}?next={{ request.path }}" onclick="return confirm('정말 로그아웃 하시겠습니까?');">로그아웃</a></li>
                 {% else %}
